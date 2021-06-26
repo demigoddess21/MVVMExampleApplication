@@ -30,7 +30,7 @@ public class LoginViewModel extends ViewModel {
           //Pass the value to view
           responseMutableLiveData.setValue(baseApiResponseFromRepo.getValue());
       } else {
-
+          fieldValidationLivedata.setValue("Fields cannot be empty");
       }
     }
 
@@ -40,7 +40,6 @@ public class LoginViewModel extends ViewModel {
         if (!mUserName.isEmpty() && !mUserPassword.isEmpty()) {
             return true;
         }
-        fieldValidationLivedata.setValue("Fields cannot be empty");
         return false;
     }
 
